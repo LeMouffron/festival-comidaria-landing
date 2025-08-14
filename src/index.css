@@ -2,41 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Festival Comidaria Design System - Brazilian Portuguese Food Festival
+All colors MUST be HSL. Premium food festival aesthetic with warm, appetizing colors.
 */
 
 @layer base {
   :root {
+    /* Core Festival Brand Colors */
+    --festival-red: 0 100% 40%;        /* #cb0000 - Primary brand color */
+    --festival-yellow: 35 100% 47%;    /* #f09800 - Secondary warm */
+    --festival-yellow2: 45 100% 47%;   /* #f0c000 - Accent warm */
+    --festival-blue: 220 32% 44%;      /* #52658c - Cool accent */
+    
+    /* Semantic Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 0 0% 10%;
+    
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 0 0% 10%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --popover-foreground: 0 0% 10%;
+    
+    --primary: 0 100% 40%;              /* Festival Red */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 45 100% 95%;           /* Light yellow tint */
+    --secondary-foreground: 0 0% 10%;
+    
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    
+    --accent: 35 100% 47%;              /* Festival Yellow */
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 100% 40%;
+    
+    --radius: 0.75rem;
+    
+    /* Festival Gradients */
+    --gradient-festival: linear-gradient(135deg, hsl(var(--festival-red)), hsl(var(--festival-yellow)));
+    --gradient-warm: linear-gradient(135deg, hsl(var(--festival-yellow)), hsl(var(--festival-yellow2)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--festival-red) / 0.9), hsl(var(--festival-yellow) / 0.8));
+    
+    /* Festival Shadows */
+    --shadow-festival: 0 10px 30px -10px hsl(var(--festival-red) / 0.3);
+    --shadow-warm: 0 5px 20px -5px hsl(var(--festival-yellow) / 0.2);
+    --shadow-elegant: 0 20px 60px -20px hsl(0 0% 0% / 0.1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +117,42 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-festival;
+  }
+}
+
+@layer components {
+  /* Festival Button Variants */
+  .btn-festival {
+    @apply bg-gradient-to-r from-[hsl(var(--festival-red))] to-[hsl(var(--festival-yellow))] 
+           text-white font-bold px-8 py-4 rounded-lg
+           hover:shadow-[var(--shadow-festival)] hover:scale-105
+           transition-all duration-300 ease-out;
+  }
+  
+  .btn-festival-outline {
+    @apply border-2 border-[hsl(var(--festival-blue))] text-[hsl(var(--festival-blue))]
+           font-semibold px-8 py-4 rounded-lg
+           hover:bg-[hsl(var(--festival-blue))] hover:text-white
+           transition-all duration-300 ease-out;
+  }
+  
+  /* Festival Text Gradients */
+  .text-festival-gradient {
+    @apply bg-gradient-to-r from-[hsl(var(--festival-red))] to-[hsl(var(--festival-yellow))]
+           bg-clip-text text-transparent;
+  }
+  
+  /* Festival Cards */
+  .card-festival {
+    @apply bg-white rounded-xl p-6 shadow-[var(--shadow-elegant)]
+           hover:shadow-[var(--shadow-warm)] hover:-translate-y-2
+           transition-all duration-300 ease-out;
+  }
+  
+  /* Hero Section Background */
+  .hero-bg {
+    @apply bg-gradient-to-br from-[hsl(var(--festival-red)/0.95)] 
+           via-[hsl(var(--festival-yellow)/0.9)] to-[hsl(var(--festival-yellow2)/0.85)];
   }
 }

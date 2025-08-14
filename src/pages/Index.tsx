@@ -1,12 +1,43 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from 'react';
+import StickyHeader from '@/components/StickyHeader';
+import HeroSection from '@/components/HeroSection';
+import FestivalHighlights from '@/components/FestivalHighlights';
+import ProgramacaoSection from '@/components/ProgramacaoSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import NewsletterSection from '@/components/NewsletterSection';
+import FestivalFooter from '@/components/FestivalFooter';
 
 const Index = () => {
+  const scrollToProgramacao = () => {
+    const programacaoSection = document.getElementById('programacao');
+    if (programacaoSection) {
+      programacaoSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <StickyHeader onScrollToProgramacao={scrollToProgramacao} />
+      
+      <main>
+        <section id="hero">
+          <HeroSection onScrollToProgramacao={scrollToProgramacao} />
+        </section>
+        
+        <FestivalHighlights />
+        
+        <ProgramacaoSection />
+        
+        <section id="testimonials">
+          <TestimonialsSection />
+        </section>
+        
+        <section id="newsletter">
+          <NewsletterSection />
+        </section>
+      </main>
+      
+      <FestivalFooter />
     </div>
   );
 };

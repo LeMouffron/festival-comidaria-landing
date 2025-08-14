@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'festival': ['Inter', 'system-ui', 'sans-serif'],
+				'festival-bold': ['Inter', 'system-ui', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,6 +65,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				festival: {
+					red: 'hsl(var(--festival-red))',
+					yellow: 'hsl(var(--festival-yellow))',
+					yellow2: 'hsl(var(--festival-yellow2))',
+					blue: 'hsl(var(--festival-blue))'
 				}
 			},
 			borderRadius: {
