@@ -1,11 +1,12 @@
 import React from 'react';
-import StickyHeader from '@/components/StickyHeader';
 import HeroSection from '@/components/HeroSection';
 import FestivalHighlights from '@/components/FestivalHighlights';
 import ProgramacaoSection from '@/components/ProgramacaoSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import NewsletterSection from '@/components/NewsletterSection';
+import InstagramSection from '@/components/InstagramSection';
 import FestivalFooter from '@/components/FestivalFooter';
+import StickyHeader from '@/components/StickyHeader';
 
 const Index = () => {
   const scrollToProgramacao = () => {
@@ -26,11 +27,15 @@ const Index = () => {
         
         <FestivalHighlights />
         
-        <ProgramacaoSection />
+        <section id="programacao">
+          <ProgramacaoSection />
+        </section>
         
         <section id="testimonials">
           <TestimonialsSection />
         </section>
+        
+        <InstagramSection />
         
         <section id="newsletter">
           <NewsletterSection />

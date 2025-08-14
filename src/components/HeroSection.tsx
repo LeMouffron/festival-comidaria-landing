@@ -38,14 +38,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToProgramacao }) => {
           3 dias de sabores únicos, chefs renomados, música ao vivo e experiências inesquecíveis para toda a família
         </p>
         
-        {/* Call-to-Action Buttons */}
+        {/* Call-to-Action Button */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button 
-            size="lg" 
-            className="btn-festival text-lg px-12 py-6 shadow-2xl"
-          >
-            Compre Seu Ingresso
-          </Button>
           <Button 
             size="lg" 
             variant="outline" 

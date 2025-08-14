@@ -92,17 +92,7 @@ const StickyHeader: React.FC<StickyHeaderProps> = ({ onScrollToProgramacao }) =>
             </button>
           </nav>
 
-          {/* CTA Button - Desktop */}
-          <div className="hidden md:block">
-            <Button 
-              className={`btn-festival font-semibold transition-all duration-300 ${
-                isScrolled ? 'shadow-md' : 'shadow-xl'
-              }`}
-              size="lg"
-            >
-              Comprar Ingresso
-            </Button>
-          </div>
+          {/* Navigation only - CTA removed */}
 
           {/* Mobile Menu Button */}
           <button
@@ -149,11 +139,7 @@ const StickyHeader: React.FC<StickyHeaderProps> = ({ onScrollToProgramacao }) =>
               >
                 Contato
               </button>
-              <div className="px-4 py-2">
-                <Button className="btn-festival w-full">
-                  Comprar Ingresso
-                </Button>
-              </div>
+              {/* CTA Button removed from mobile menu */}
             </nav>
           </div>
         )}
