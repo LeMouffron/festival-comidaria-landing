@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'festival': ['Inter', 'system-ui', 'sans-serif'],
-				'festival-bold': ['Inter', 'system-ui', 'sans-serif'],
+				'festival': ['Montserrat', 'Inter', 'system-ui', 'sans-serif'], // Similar ao Bonn BF Regular
+				'festival-bold': ['Montserrat', 'Inter', 'system-ui', 'sans-serif'], // Similar ao Bonn BF Bold
 			},
 			colors: {
 				border: 'hsl(var(--border))',

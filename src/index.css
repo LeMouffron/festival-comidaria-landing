@@ -8,11 +8,11 @@ All colors MUST be HSL. Premium food festival aesthetic with warm, appetizing co
 
 @layer base {
   :root {
-    /* Core Festival Brand Colors */
+    /* Core Festival Brand Colors - Conforme Manual da Marca */
     --festival-red: 0 100% 40%;        /* #cb0000 - Primary brand color */
-    --festival-yellow: 35 100% 47%;    /* #f09800 - Secondary warm */
-    --festival-yellow2: 45 100% 47%;   /* #f0c000 - Accent warm */
-    --festival-blue: 220 32% 44%;      /* #52658c - Cool accent */
+    --festival-yellow: 35 100% 50%;    /* #f09800 - Secondary warm */
+    --festival-yellow2: 45 100% 50%;   /* #f0c000 - Accent warm */
+    --festival-blue: 217 32% 44%;      /* #52658c - Cool accent */
     
     /* Semantic Colors */
     --background: 0 0% 100%;
@@ -150,9 +150,17 @@ All colors MUST be HSL. Premium food festival aesthetic with warm, appetizing co
            transition-all duration-300 ease-out;
   }
   
-  /* Hero Section Background */
+  /* Hero Section Background - Melhor contraste */
   .hero-bg {
-    @apply bg-gradient-to-br from-[hsl(var(--festival-red)/0.95)] 
-           via-[hsl(var(--festival-yellow)/0.9)] to-[hsl(var(--festival-yellow2)/0.85)];
+    @apply bg-gradient-to-br from-[hsl(var(--festival-red)/0.85)] 
+           via-[hsl(0_0%_0%/0.4)] to-[hsl(0_0%_0%/0.6)];
+  }
+  
+  /* Novo estilo para botão outline com melhor contraste */
+  .btn-festival-outline-hero {
+    @apply border-2 border-white/80 text-white font-semibold px-8 py-4 rounded-lg
+           bg-white/10 backdrop-blur-sm
+           hover:bg-white hover:text-[hsl(var(--festival-red))] hover:border-white
+           transition-all duration-300 ease-out shadow-lg;
   }
 }

@@ -50,7 +50,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToProgramacao }) => {
             size="lg" 
             variant="outline" 
             onClick={onScrollToProgramacao}
-            className="btn-festival-outline text-lg px-12 py-6 bg-white/10 backdrop-blur-sm"
+            className="btn-festival-outline-hero text-lg px-12 py-6"
           >
             Ver Programação
           </Button>
