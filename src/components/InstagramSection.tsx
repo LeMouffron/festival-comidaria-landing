@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 const mockInstagramPosts = [
   {
     id: '1',
-    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=400&fit=crop&auto=format',
+    image: 'https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=400&h=400&fit=crop&auto=format',
     caption: 'Pizza artesanal do chef @mouffronleandro! 🍕✨',
     likes: 245,
     comments: 23
@@ -41,7 +41,7 @@ const mockInstagramPosts = [
   },
   {
     id: '6',
-    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=400&fit=crop&auto=format',
+    image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=400&fit=crop&auto=format',
     caption: 'Pratos exclusivos que só você encontra aqui! ⭐',
     likes: 203,
     comments: 31
