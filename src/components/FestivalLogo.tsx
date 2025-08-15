@@ -15,7 +15,7 @@ const FestivalLogo: React.FC<FestivalLogoProps> = ({ className = '', size = 'md'
   return (
     <div className={`${sizeClasses[size]} ${className} flex items-center justify-center`}>
       <img
-        src="/lovable-uploads/4688b523-2198-4b90-85b0-4b1c4e3cbdbe.png"
+        src="/lovable-uploads/a4833174-b89e-4042-8fd9-f23aa502c956.png"
         alt="Festival Comidaria"
         className="w-full h-full object-contain"
       />
